@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Exercise 3</title>
+
+</head>
+
+<body>
+
+  <h1>Class Selectors</h1>
+
+  <p>Imagine if you had multiple paragraphs on a web page and you wanted one of them to use a large red font, another to use a smaller font, and a third to have a background color.</p>
+
+  <p>How would you make each of them different when all three paragraphs use the &lt;p&gt; element?</p>
+
+  <p>You can add a class to any HTML element but <strong>don't go crazy slapping a class onto <i>everything</i> you want to style...</strong> most times you can talk directly to the element itself without a class or use a selector based on the context of the element you want to style.</p>
+
+  <p>You can add a class to any element you want and all elements that share the same class name will get the same styles.</p>
+
+
+
+  <h2><u>Step 1:</u><br>
+    Write a style rule that starts with a period and then give it a name:</h2>
+
+  <code>
+  .example {<br>
+  &nbsp;&nbsp;&nbsp;font-size: 200%;<br>
+  &nbsp;&nbsp;&nbsp;color: red;<br>
+  }
+  </code>
+
+
+  <h2><u>Step 2:</u><br>
+    Pick a HTML element and add the class attribute with your style rule's name:</h2>
+
+  <code>
+    <p>&lt;p&gt;I'm a regular paragraph&lt;/p&gt;</p>
+        
+    <p>&lt;p <strong>class="example"</strong>&gt;I have a nickname that other paragraphs don't!&lt;/p&gt;</p>
+  </code>
+
+</body>
+</html>

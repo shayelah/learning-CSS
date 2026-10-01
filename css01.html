@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Exercise 1</title>
+
+</head>
+
+<body>
+
+
+  <h1>CSS Syntax: Selectors</h1>
+
+  <p>When you want to style a section of content in a web page, you need to figure out how to reference that content. In CSS terms, this is called a selector.</p>
+
+
+  <h2>Tag selectors</h2>
+
+  <p>Any HTML tag can be a selector. Furthermore, you can create custom selectors to suit your own needs. A tag selector uses just the tag you're selecting without any modifications. This example will make all h1 elements twice as big.</p>
+
+  <code><strong>h1</strong> {font-size: 200%;}</code>
+
+
+  <h2>Class selectors</h2>
+
+  <p>In addition to selecting a specific tag you can select an element that you've given a "nickname" to in the HTML using a class attribute. Class selectors are essentially custom selectors you create, give a name to, and then apply to any element you want. </p>
+
+  <p>For example, what if you wanted a few of your images to have a border around them but not all of them. You could do this easily by applying a class to the ones you want to look this way:</p>
+
+  <p><code>&lt;img src="example.jpg" <strong>class=</strong>"fancy"></code></p>
+
+  <p>Style rules that are targeting a class name are different than those that target a specific element. Class selectors start with a <strong>.</strong> before the class name to indicate you're ignoring the element itself and looking at the element's class attribute instead. Here's what it looks like: </p>
+
+  <p><code> <strong>.</strong>fancy {border: 5px solid white;} </code></p>
+
+
+
+
+  <h2>Descendent selectors</h2>
+
+  <p>What if we wanted to set the font size of all paragraphs contained within the footer of your page but not in any other area? The best way to do this is to use another type of selector: a descendent selector.</p>
+
+  <p>A descendent selector tells the browser to look in only the areas of your page, then to only apply the style to a certain tag/id/class inside it. For example, the following code would cause paragraphs to be smaller but only if they're inside the foorter: </p>
+
+  <code>footer p {font-size: 75%;} </code>
+
+
+
+  <h2>Multiple selectors</h2>
+
+  <p>When it is necessary to apply a style to multiple content divisions, you can easily combine selectors by separating them with commas. Here&apos;s an example where text in both paragraphs and lists are changed to the Arial font:</p>
+
+  <code> p<strong>,</strong> li {font-family: arial;} </code>
+
+  <p>This would be the same thing as writing two separate style rules, one for paragraphs and another for list items. Adding both selectors separated by a comma allows us to talk to both elements at the same time and simplify our CSS.</p>
+
+</body>
+</html>

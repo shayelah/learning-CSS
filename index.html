@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Exercise: Learning CSS</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1.2rem;
+      line-height: 1.4;
+      padding: 1rem 2rem;
+      max-width: 64rem;
+      margin: 0 auto;
+      background-color: #fffbeb;
+    }
+
+    h1 {
+      font-size: 2rem;
+      border-bottom: 1px solid silver;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid silver;
+      margin-bottom: 0.5rem;
+    }
+
+    li {
+      margin: 0 0 0.75rem 2rem;
+    }
+
+    dt {
+      margin-top: 1rem;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+
+    code {
+      font-family: monospace;
+      font-weight: bold;
+      background-color: silver;
+      padding: 0.3rem;
+      border-radius: 0.75rem;
+      letter-spacing: 1px;
+      font-size: 110%;
+    }
+
+    code strong {
+      color: crimson;
+      font-weight: bold;
+    }
+
+    section {
+      background-color: #dedfd7b0;
+      padding: 1rem 2rem;
+      margin: 1rem 0;
+      border-radius: 1rem;
+      border: 1px solid #89a9ae;
+
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Learning CSS</h1>
+  </header>
+
+  <p>In these exercises, you'll begin learning how to change the appearance of a web page by writing CSS rules. You will practice changing colors, fonts, spacing, borders, backgrounds, and page layout. You'll also learn the difference between <strong>internal</strong> style sheets and <strong>external</strong> style sheets.</p>
+
+  <section class="links">
+    <nav>
+      <dl>
+        <dt><a href="css01.html">Exercise 1</a></dt>
+        <dd>In this page, you will create an internal style sheet and write your first CSS rules. You will practice selecting elements and changing properties such as color and font size.</dd>
+        <dt><a href="css02.html">Exercise 2</a></dt>
+        <dd>In this exercise, you will style the body element, work with background color and fonts, and see how inheritance affects elements inside the page. You will also practice grouped selectors and descendant selectors.</dd>
+        <dt><a href="css03.html">Exercise 3</a></dt>
+        <dd>In this exercise, you will learn how class selectors work. Class selectors let you create reusable styles and apply them only to specific elements using the class attribute.</dd>
+        <dt><a href="css04.html">Exercise 4</a></dt>
+        <dd>In this exercise, you will work with the CSS box model. You will use margin, padding, border, background colors, and rounded corners to make boxes more visible and easier to understand.</dd>
+        <dt><a href="css05.html">Exercise 5</a></dt>
+        <dd>In this exercise, you will use semantic container elements such as header and main. You will also review the difference between head, header, and heading elements such as h1.</dd>
+        <dt><a href="css06.html">Exercise 6</a></dt>
+        <dd>In this exercise, you will begin moving toward a more realistic CSS workflow. You will connect a reset style sheet, create your own external CSS file, and link that file to your HTML page.</dd>
+      </dl>
+    </nav>
+  </section>
+
+  <section class="intro">
+    <h2>A Short Introduction to CSS</h2>
+
+    CSS stands for Cascading Style Sheets.
+
+    HTML describes what the content is.
+
+    CSS describes how that content should look.
+
+    <p>For example:</p>
+
+    <ul>
+      <li>HTML can say “this is the main heading.”</li>
+      <li>CSS can say “make the main heading dark green, larger, centered, and spaced away from the content below.”</li>
+    </ul>
+
+    <p>CSS works by selecting HTML elements and declaring how they should change.</p>
+
+    <p>A basic CSS rule has three major parts:</p>
+
+    <ol>
+      <li>a <strong>selector</strong></li>
+      <li>a <strong>property</strong></li>
+      <li>a <strong>value</strong></li>
+    </ol>
+
+    <p>The selector chooses what you want to change.</p>
+
+    <p>The property identifies what aspect you want to change.</p>
+
+    <p>The value tells the browser what you want that property to become.</p>
+
+    <p>Example:</p>
+
+    <p> <code>&nbsp;h1 { color: olive; }&nbsp;</code>
+    </p>
+
+    <p>In that example:</p>
+
+    <ul>
+      <li><code>&nbsp;h1&nbsp;</code> is the <strong>selector</strong></li>
+      <li><code>&nbsp;color&nbsp;</code> is the <strong>property</strong></li>
+      <li><code>&nbsp;olive&nbsp;</code> is the <strong>value</strong></li>
+    </ul>
+
+  </section>
+
+  <section class="internal">
+
+    <h2>Internal Style Sheets</h2>
+    <p>In the early exercises, you will write CSS inside the HTML file using the <code>&lt;style&gt;</code> element. This is called an <strong>internal</strong> style sheet. </p>
+
+    An internal style sheet is placed inside the <code>&lt;head&gt;</code> of the HTML document. Internal style sheets are useful when you are learning because everything is in one file and you can see the connection between the HTML and CSS more easily. However, internal style sheets only affect that one page. They are not the best choice for larger websites with multiple pages.
+  </section>
+
+  <section class="external">
+
+    <h2>External Style Sheets</h2>
+    <p>Later in the exercise, you will move toward using <strong>external</strong> style sheets. An external style sheet is a separate CSS file that gets linked to an HTML page. External style sheets are the standard approach for real websites because many pages can share the same CSS file. That means if you want to change the design of the website, you can update one CSS file instead of changing the same style rules on every HTML page. You will learn how to connect an external CSS file using the <code>&lt;link&gt;</code> element. </p>
+  </section>
+
+
+  <section class="reset">
+
+    <h2>Reset Style Sheets </h2>
+    <p>The exercise also introduces a **reset style sheet**. Browsers automatically apply default styles to HTML elements. For example, headings are large and bold, paragraphs have spacing, lists are indented, and body content may have default margins. Those defaults can be helpful, but they can also make CSS confusing when you are learning. A reset style sheet removes many of those browser defaults so you can start from a cleaner, more predictable baseline. In this exercise, you will connect `reset.css` first, then connect your own CSS file after it. The order matters. The reset style sheet should come first because it removes default styling. Your own style sheet should come second because it adds your design choices back in.</p>
+  </section>
+
+
+
+  <section class="syntax">
+    <h2>CSS Syntax</h2>
+
+    <p>In HTML, you use <strong>angle brackets</strong>, <strong>tags</strong>, <strong>attributes</strong>, and <strong>closing tags</strong>. </p>
+
+    <p>
+      In CSS, you use <strong>selectors</strong>, <strong>curly braces</strong>, <strong>properties</strong>, <strong>values</strong>, <strong>colons</strong>, and <strong>semicolons</strong>. A typical CSS rule looks like this:</p>
+    <p><code>&nbsp;selector { property: value; }&nbsp;</code></p>
+
+    <p>As your CSS gets more complex, it is easier to write each property on its own line:</p>
+
+    <p><code>&nbsp;selector {&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;property: value;<br>
+    &nbsp;&nbsp;&nbsp;property: value;<br>
+    &nbsp;}&nbsp;</code></p>
+
+    <p>This makes the code easier to read and much easier to troubleshoot if something isn't working.</p>
+
+
+    <h3>Semicolons Matter </h3>
+
+    <p>Each CSS declaration should end with a semicolon.</p>
+
+
+    <p>Example: <code>&nbsp;color: red<strong>;</strong>&nbsp;</code></p>
+
+    <p>The semicolon tells the browser that one declaration is finished and another can begin. If you forget a semicolon, the next declaration may not work correctly. This is one of the most common beginner CSS mistakes.</p>
+  </section>
+
+  <section class="remember">
+
+    <h2>Important Concepts to Remember</h2>
+
+    <h3>CSS changes the appearance of an element, not its meaning.</h3>
+    <p>HTML describes the structure and meaning of content. CSS changes how that content looks. Try to keep those two jobs separate.</p>
+
+    <h3>Selectors choose what to style</h3>
+    <p>A selector tells the browser which elements should pay attention to a CSS rule. Common selector types include: - element selectors - class selectors - descendant selectors - grouped selectors </p>
+
+
+    <h3>Declarations say what changes </h3>
+    <p>Inside the curly braces, declarations tell the browser what to change. Each declaration has a property and a value. Example: - `color: crimson;
+
+    <h3>The cascade matters </h3>
+    <p>CSS stands for Cascading Style Sheets. That means styles can inherit, combine, override, and build on one another. The order of rules and the relationship between elements can affect what appears in the browser.</p>
+
+    <h3>File order matters</h3>
+    <p>When linking multiple CSS files, the order matters. For this exercise, the reset style sheet should come before your own style sheet. That way, the reset removes default browser styling first, and your own CSS adds your chosen design afterward. </p>
+
+  </section>
+
+</body>
+</html>
