@@ -5,17 +5,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Exercise 5</title>
+  <style>
+    header {
+      background-color: black;
+      color: white;
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+    }
 
+    header h1 {
+      color: crimson;
+      font-size: 75%;
+    }
+
+    header h2 {
+      font-size: 2rem;
+      font-weight: normal;
+    }
+
+    main {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 125%;
+      line-height: 1.3;
+      margin-left: 3rem;
+      border-left: 1px solid silver;
+      padding-left: 3rem;
+      margin-right: 3rem;
+      border-right: 1px solid silver;
+      padding-right: 3rem;
+    }
+  </style>
 </head>
 
 
 <body>
 
-  <h1>Cascading Style Sheets (CSS)</h1>
-  <h2>Style the Appearance of Elements and Control Page Layout</h2>
+  <header>
+    <h1>Cascading Style Sheets (CSS)</h1>
+    <h2>Style the Appearance of Elements and Control Page Layout</h2>
+  </header>
 
 
-
+<main>
   <p>Cascading Style Sheets (CSS) is a coding language used for describing the visual presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
 
   <p>CSS is designed to enable the separation of content (HTML) and presentation (CSS). Presentation includes page layout, colors, and fonts. This separation makes coding easier, provides more flexibility and control, enables multiple web pages to all have the same formatting by sharing a common <code>.css</code> file.</p>
@@ -23,7 +56,7 @@
   <p>Separation of formatting and content also makes it easy to present the same page to appear differently for different devices, so your pages can look one way on a desktop but different on phones or tablets. This is called "responsive design" and is an increasingly important use of style sheets.</p>
 
   <p>The "Cascading" part of CSS means that styles can fall (or cascade) from one style rule to another, enabling multiple rules to apply to a single element or even multiple style sheet files to be used on one HTML document. A child element will inherit the rules of its parent but you can overrule those styles by talking directly to the element itself.</p>
-
+</main>
 
 </body>
 </html>

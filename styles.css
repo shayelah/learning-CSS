@@ -1,0 +1,54 @@
+body {
+  background-color: black;
+}
+
+.wrapper {
+   background-color: white;
+   width: 600px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 1rem 2rem;
+   border: 10px solid silver;
+  }
+
+header {
+  background-color: #e2e2e2;
+  padding: 1rem;
+  border: 1px solid #8d8d8d;
+  border-radius: 2rem;
+  margin: 0 -1rem;
+}
+
+
+header h1 {
+  font-size: 175%;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5rem;
+}
+
+
+header h2 {
+  font-weight: normal;
+  font-size: 80%;
+}
+
+main {
+  margin-top: 1rem;
+  font-size: 125%;
+  line-height: 1.225;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main li {
+  margin: 0 0 1rem 2rem;
+}
+
+.signature {
+  text-align: right;
+}
+
+.signature {
+  font-family: cursive;
+  font-size: 140%;
+}
